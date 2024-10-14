@@ -1,0 +1,251 @@
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+}
+
+.grid-item {
+    display: grid;
+    border: 2px solid black;
+    justify-items: center;
+    align-items: center;
+}
+
+.star {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(246, 151, 91);
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.main {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    gap: 20px;
+}
+
+.frame {
+    width: 300px;
+    height: 300px;
+    background-color: rgb(75, 64, 134);
+    clip-path: polygon(0% 0%, 0% 100%, 25% 100%, 25% 25%, 75% 25%, 75% 75%, 25% 75%, 25% 100%, 100% 100%, 100% 0%);
+}
+
+.bevel {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(75, 206, 101);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+.message {
+    width: 120px;
+    height: 120px;
+    background-color: rgb(87, 168, 214);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+}
+
+.social-media div {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    background-color: rgb(235, 172, 78);
+    clip-path: circle(50% at 50% 50%);
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 180px);
+    grid-template-rows: repeat(1, auto);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(235, 172, 78);
+    clip-path: circle(50% at 50% 50%);
+    justify-self: start;
+}
+
+.hamburger-menu {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(235, 172, 78);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    justify-self: end;
+    display: block;
+}
+
+.page-menu {
+    display: none;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.gallery-image {
+    width: 300px;
+    height: 200px;
+    background-color: rgb(48, 82, 150);
+    clip-path: polygon(100% 0, 100% 69%, 65% 100%, 0 100%, 0 0);
+}
+
+.contact-form {
+    display: none;
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+    body {
+        background-color: rgb(175, 171, 171);
+        color: #fff;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .menu {
+        width: 100%;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .page-menu {
+        display: block;
+        list-style: none;
+        justify-self: end;
+        margin-right: 20px;
+    }
+
+    .page-menu li {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    .star {
+        justify-self: start;
+    }
+
+    .frame {
+        display: none;
+    }
+
+    .bevel {
+        width: 300px;
+        height: 210px;
+        margin-top: 20px;
+    }
+
+    .message {
+        display: none;
+    }
+
+    .contact-form {
+        display: block;
+        width: 762px;
+        height: 422px;
+        background-color: rgb(95, 227, 196);
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    }
+
+    .social-media {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}
+
+
+@media (min-width: 1025px) {
+    body {
+        background-color: rgb(244, 191, 126);
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .menu {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center; 
+        align-items: center;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .page-menu {
+        display: flex;
+        justify-self: center;
+        gap: 30px;
+    }
+
+    .page-menu li {
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    .star {
+        justify-self: center;
+        width: 300px;
+        height: 300px;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, auto);
+        gap: 20px;
+    }
+
+    .frame {
+        width: 300px;
+        height: 300px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 20px;
+        display: grid;
+    }
+
+    .gallery-image {
+        width: 300px;
+        height: 200px;
+        background-color: rgb(48, 82, 150);
+        clip-path: polygon(100% 0, 100% 69%, 65% 100%, 0 100%, 0 0);
+    }
+
+    .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .message {
+        width: 90px;
+        height: 90px;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
+    }
+}
